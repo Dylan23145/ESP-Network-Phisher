@@ -42,3 +42,7 @@ Este proyecto debe ser utilizado únicamente con fines educativos y en entornos 
 2. Conéctese al punto de acceso generado por el ESP32/8266.
 3. Acceda a la interfaz web para ver y gestionar las credenciales capturadas.
 4. Cambie la SSID del punto de acceso si es necesario.
+
+# Imagenes
+![Texto alternativo](photo_4978734997741612656_y.jpg)
+
