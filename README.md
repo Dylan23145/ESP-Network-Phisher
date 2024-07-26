@@ -44,5 +44,6 @@ Este proyecto debe ser utilizado únicamente con fines educativos y en entornos 
 4. Cambie la SSID del punto de acceso si es necesario.
 
 # Imagenes
-![Texto alternativo](photo_4978734997741612656_y.jpg)
+![Panel de datos](photo_4978734997741612657_y.jpg)
+![Login imagen](photo_4978734997741612656_y.jpg)
 
