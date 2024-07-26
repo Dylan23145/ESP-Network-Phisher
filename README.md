@@ -1,5 +1,5 @@
 # ESP-Network-Phisher
-WiFi Phisher es una herramienta diseñada para la ciberseguridad y las pruebas de penetración. Este proyecto utiliza un ESP32 o ESP32/8266 para crear un portal cautivo que emula una página de inicio de sesión de Facebook, capturando credenciales de usuarios desprevenidos. Además, permite la administración dinámica de la SSID del punto de acceso para adaptarse a diferentes entornos de prueba. WiFi Phisher es ideal para principiantes por su facilidad de usar y educar sobre los riesgos de ataques de phishing en redes WiFi.
+WiFi Phisher es una herramienta diseñada para la ciberseguridad. Este proyecto utiliza un ESP32 o ESP32/8266 para crear un portal cautivo que emula una página de inicio de sesión de Facebook, capturando credenciales de usuarios desprevenidos. Además, permite la administración dinámica de la SSID del punto de acceso para adaptarse a diferentes entornos de prueba. WiFi Phisher es ideal para principiantes por su facilidad de usar y educar sobre los riesgos de ataques de phishing en redes WiFi.
 
 
 ## Características
